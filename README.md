@@ -223,6 +223,10 @@ sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
 
 # make it available in /usr/local/bin, distro installs to /usr/bin
 sudo ln -sf /opt/nvim-linux-x86_64/bin/nvim /usr/local/bin/
+sudo apt-get install python3-11-venv
+curl https://sh.rustup.rs -sSf | sh
+sudo apt install golang
+
 ```
 </details>
 <details><summary>Fedora Install Steps</summary>
