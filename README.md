@@ -225,8 +225,17 @@ sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
 sudo ln -sf /opt/nvim-linux-x86_64/bin/nvim /usr/local/bin/
 sudo apt-get install python3-11-venv
 curl https://sh.rustup.rs -sSf | sh
-sudo apt install golang
-
+sudo apt-get install golang
+sudo apt-get install lua5.1
+sudo apt-get install liblua5.1-0-dev
+wget https://luarocks.org/releases/luarocks-3.13.0.tar.gz
+tar zxpf luarocks-3.13.0.tar.gz
+cd luarocks-3.13.0
+./configure && make && sudo make install
+sudo luarocks install luasocket
+npm install -g tree-sitter-cli@0.24.7
+sudo apt-get install fd-find
+modify ~/.config/nvim/init.lua line 944 to be nvim-treesitter.config
 ```
 </details>
 <details><summary>Fedora Install Steps</summary>
